@@ -3,13 +3,14 @@
 	width: 1080px;
 	margin: 0 auto;
 }
+
+
 /*Positioning the cards of the page*/
 .card {
 	float: left; /*All the cards move to the left on each*/
 	width: 200px;
 	margin: 10px;
 	height: 200px;
-	background: blue;
-	background-image: url('../img/card_back.jpg');
 	cursor: pointer;
+  background-image: url('../img/card_back.jpg');
 }
