@@ -65,86 +65,40 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
 
     cards[i].addEventListener('click', function(e) {
       // console.log(e.target);
-      e.target.innerHTML = e.target.id;
-      e.target.style.backgroundColor = 'red';
-      $(this).css('background', 'red')
-      var element1 = "";
-      var element2 = "";
-      var element3 = "";
-      var element4 = "";
-      var element5 = "";
-      var element6 = "";
-      var element7 = "";
-      var element8 = "";
+      if(this.id == "card1") {
+        this.style.backgroundImage = "url('./img/Arsenal-icon.png')";
+      } else if(this.id == "card2") {
+        this.style.backgroundImage = "url('./img/Burnley_icon.png')";
+      }
+      else if(this.id == "card3") {
+        this.style.backgroundImage = "url('./img/Chelsea_icon.png')";
+      }
+      else if(this.id == "card4") {
+        this.style.backgroundImage = "url('./img/Everton_icon.png')";
+      }
+      else if(this.id == "card5") {
+        this.style.backgroundImage = "url('./img/Liverpool_icon.png')";
+      }
+      else if(this.id == "card6") {
+        this.style.backgroundImage = "url('./img/ManchesterCity_icon.png')";
+      }
+      else if(this.id == "card7") {
+        this.style.backgroundImage = "url('./img/ManU_icon.png')";
+      }
+      else if(this.id == "card8") {
+        this.style.backgroundImage = "url('./img/Southampton_icon.png')";
+      }
+      array.push(this);
       // Every click is pushing the current card into the blank array
-
-      // else if (element2.id == "card2") {
-      //   element2.classList.remove("card-back");
-      // }
-      // else if (element3.id == "card3") {
-      //   element3.classList.remove("card-back");
-      // }
-      // else if (element4.id == "card4") {
-      //   element4.classList.remove("card-back");
-      // }
-      // else if (element5.id == "card5") {
-      //   element5.classList.remove("card-back");
-      // }
-      // else if (element6.id == "card6") {
-      //   element6.classList.remove("card-back");
-      // }
-      // else if (element7.id == "card7") {
-      //   element7.classList.remove("card-back");
-      // }
-      // else if (element8.id == "card8") {
-      //   element8.classList.remove("card-back");
-      // }
-
-
-      array.push(e.target);
-      // check that its working
-      console.log(array);
 
       // If cards match
       if (array.length == 2 && array[0].id == array[1].id) {
         // cards stay face up, increase the score and clear the array
         score++;
         document.getElementById("score").innerHTML = "Your Score" + ":" + score;
-        array = []
-      } else if (array.length == 1) {
-        if (array[0].id == "card1") {
-          array[0].style.backgroundImage = "url('./img/Arsenal-icon.png')";
-        }
-        else if (array[0].id == "card2") {
-          array[0].style.backgroundImage = "url('./img/Burnley_icon.png')";
-        }
-        else if (array[0].id == "card3") {
-          array[0].style.backgroundImage = "url('./img/Chelsea_icon.png')";
-        }
-        else if (array[0].id == "card4") {
-          array[0].style.backgroundImage = "url('./img/Everton_icon.png')";
-        }
-        else if (array[0].id == "card5") {
-          array[0].style.backgroundImage = "url('./img/Liverpool-icon.png')";
-        }
-        else if (array[0].id == "card6") {
-          array[0].style.backgroundImage = "url('./img/ManchesterCity_icon.png')";
-        }
-        else if (array[0].id == "card7") {
-          array[0].style.backgroundImage = "url('./img/ManU_icon.png')";
-        }
-        else if (array[0].id == "card8") {
-          array[0].style.backgroundImage = "url('./img/Southampton_icon.png')";
-        }
+        array = [];
 
-
-
-
-
-
-
-
-      } else {
+    } else if(array.length == 2){
         // turn cards face down and clear the array
         var startTime = setTimeout(function() {
           console.log(array[0]);
@@ -155,48 +109,7 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
           array = [];
         }, 1000)
       }
-      if (array.length == 2 && array[0].id == array[1].id) {
-        // cards stay face up, increase the score and clear the array
-        score++;
-        document.getElementById("score").innerHTML = "Your Score" + ":" + score;
-        array = []
-      } else if (array.length == 1) {
-        if (array[1].id == "card1") {
-          array[1].style.backgroundImage = "url('./img/Arsenal-icon.png')";
-        }
-        else if (array[1].id == "card2") {
-          array[1].style.backgroundImage = "url('./img/Burnley_icon.png')";
-        }
-        else if (array[1].id == "card3") {
-          array[1].style.backgroundImage = "url('./img/Chelsea_icon.png')";
-        }
-        else if (array[1].id == "card4") {
-          array[1].style.backgroundImage = "url('./img/Everton_icon.png')";
-        }
-        else if (array[1].id == "card5") {
-          array[1].style.backgroundImage = "url('./img/Liverpool-icon.png')";
-        }
-        else if (array[1].id == "card6") {
-          array[1].style.backgroundImage = "url('./img/ManchesterCity_icon.png')";
-        }
-        else if (array[1].id == "card7") {
-          array[1].style.backgroundImage = "url('./img/ManU_icon.png')";
-        }
-        else if (array[1].id == "card8") {
-          array[1].style.backgroundImage = "url('./img/Southampton_icon.png')";
-        }
 
-      } else {
-        // turn cards face down and clear the array
-        var startTime = setTimeout(function() {
-          console.log(array[0]);
-          array[0].style.backgroundImage = "url('img/card_back.jpg')";
-          array[0].innerHTML = "";
-          array[1].style.backgroundImage = "url('img/card_back.jpg')";
-          array[1].innerHTML = "";
-          array = [];
-        }, 1000)
-      }
       if (score === 8) {
         console.log("You are the winner");
         //<input type="button" value="Reload Page" onClick="window.location.reload()">

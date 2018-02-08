@@ -1,16 +1,28 @@
 /*Centers the container holding all the classes*/
+
 .container{
 	width: 1080px;
 	margin: 0 auto;
+	perspective: 700;
+	/* background: black; */
 }
-
+body {
+	background: url('../img/card_table.png');
+	background-repeat: no-repeat;
+}
 
 /*Positioning the cards of the page*/
 .card {
 	float: left; /*All the cards move to the left on each*/
 	width: 200px;
 	margin: 10px;
-	height: 200px;
+	height: 300px;
 	cursor: pointer;
   background-image: url('../img/card_back.jpg');
+	transition: all 0.6s ease;
+	transform-style: preserve-3d;
+}
+
+.card:active {
+	transform: rotateY(180deg);
 }
