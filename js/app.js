@@ -1,5 +1,7 @@
 $(document).ready(function() { //When the page loads
 
+
+
   //newGame();
 
 
@@ -115,6 +117,7 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
         //<input type="button" value="Reload Page" onClick="window.location.reload()">
         clearTimeout(timer);
 
+
         if (count === 0 && score < 8) {
           console.log("You lose");
         }
@@ -135,6 +138,9 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
 
   }
 
+
+
+
   //TIMER!!
   var count = 30;
 
@@ -150,10 +156,25 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
       clearInterval(counter); //Clear interval stops the countdown of the set interval
       //counter ended, do something here
       console.log("Game over");
+      $('.container').empty();
+      $('.lose').animate({left: '250px'});
+      var banner = $(".animate");
 
-      // for (var i = 0; i < cards.length; i++) {
-      //   cards[i].removeEventListener()
-      // }
+for (var i=0; i<999; i++) {
+
+  banner.css("opacity", "1");
+  banner.animate({left: 400}, 1000);
+
+  for (var k=0; k<5; k++) {
+    banner.animate({opacity: 0}, 600);
+    banner.animate({opacity: 1}, 600);
+  }
+
+  banner.delay(2000).animate({left: 1200}, 1000);
+  banner.animate({left: -600}, 0);
+
+}
+
     }
 
     //Do code for showing the number of seconds here

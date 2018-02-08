@@ -11,5 +11,25 @@ body {
     height:18em;
     margin-top: -9em; /*set to a negative number 1/2 of your height*/
     margin-left: -15em; /*set to a negative number 1/2 of your width*/
-    border: 1px solid #ccc;
+}
+
+.Solo-but{
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.Solo-but: hover{
+  text-decoration: none;
+}
+
+.Friend-but{
+  font-size: 40px;
+  }
+
+.Friend-but: hover{
+  text-decoration: none;
+}
+
+.Instruct-but{
+  font-size: 20px;
 }
