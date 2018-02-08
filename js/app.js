@@ -161,7 +161,7 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
 
 
   //TIMER!!
-  var count = 60;
+  var count = 5;
 
   var counter = setInterval(timer, 1000); //1000 will run it every 1 second
 
@@ -204,7 +204,7 @@ body.appendChild(button);
 
 // 3. Add event handler
 button.addEventListener ("click", function() {
-    window.location.href = "http://game.html";
+    window.location.href = "game.html";
 });
 
 // 1. Create the button
@@ -217,7 +217,7 @@ body.appendChild(button2);
 
 // 3. Add event handler
 button2.addEventListener ("click", function() {
-    window.location.href = "http://index.html";
+    window.location.href = "index.html";
 });
 
     }
