@@ -114,12 +114,31 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
 
       if (score === 8) {
         console.log("You are the winner");
-        //<input type="button" value="Reload Page" onClick="window.location.reload()">
+        $('.container').empty();
+        $('.animate-win').animate({left: '250px'});
+        var banner = $(".animate-win");
+
+  for (var i=0; i<999; i++) {
+
+    banner.css("opacity", "1");
+    banner.animate({left: 400}, 1000);
+
+    for (var k=0; k<5; k++) {
+      banner.animate({opacity: 0}, 600);
+      banner.animate({opacity: 1}, 600);
+    }
+
+    banner.delay(2000).animate({left: 1200}, 1000);
+    banner.animate({left: -600}, 0);
+
+  }
+
+
         clearTimeout(timer);
 
 
         if (count === 0 && score < 8) {
-          console.log("You lose");
+
         }
 
       }
@@ -142,7 +161,7 @@ var image_array = ["Arsenal-icon.png", "Arsenal-icon.png", "Burnley_icon.png", "
 
 
   //TIMER!!
-  var count = 30;
+  var count = 60;
 
   var counter = setInterval(timer, 1000); //1000 will run it every 1 second
 
@@ -174,6 +193,32 @@ for (var i=0; i<999; i++) {
   banner.animate({left: -600}, 0);
 
 }
+
+// 1. Create the button
+var button = document.createElement("button");
+button.innerHTML = "Retry game";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", function() {
+    window.location.href = "http://game.html";
+});
+
+// 1. Create the button
+var button2 = document.createElement("button");
+button2.innerHTML = "Return home";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button2);
+
+// 3. Add event handler
+button2.addEventListener ("click", function() {
+    window.location.href = "http://index.html";
+});
 
     }
 

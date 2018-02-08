@@ -23,6 +23,35 @@ body {
   left: -400px;
 }
 
+button {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: red;
+  border: none;
+}
+button:hover {
+  background: green;
+}
+button2 {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: white;
+  border: none;
+}
+button:hover {
+  background: green;
+}
+
+.win-lose-container{
+  position: absolute;
+  right: 200px;
+}
+
+
 
 /*Positioning the cards of the page*/
 .card {
