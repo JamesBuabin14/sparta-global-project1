@@ -1,16 +1,21 @@
 /*Centers the container holding all the classes*/
 
-.container{
-	width: 1080px;
-	margin: 0 auto;
-	perspective: 700;
-	/* background: black; */
-}
-body {
-	background: url('../img/card_table.png');
-	background-repeat: no-repeat;
+.container {
+  /*Container for the cards*/
+  width: 1080px;
+  /*Size of the container*/
+  margin: 0 auto;
+  /*Aligns everything in the middle*/
+  perspective: 700;
+  /* background: black; */
 }
 
+body {
+  background: url('../img/card_table.png');
+  /*Background of a card table*/
+  background-repeat: no-repeat;
+  /*Background images are not repeated*/
+}
 
 .animate {
   margin: 0;
@@ -31,9 +36,11 @@ button {
   background: red;
   border: none;
 }
+
 button:hover {
   background: green;
 }
+
 button2 {
   margin-top: 20px;
   line-height: 60px;
@@ -42,44 +49,42 @@ button2 {
   background: white;
   border: none;
 }
+
 button:hover {
   background: green;
 }
 
-.win-lose-container{
-  position: absolute;
-  right: 200px;
-}
-
-
-
 /*Positioning the cards of the page*/
+
 .card {
-	float: left; /*All the cards move to the left on each*/
-	width: 200px;
-	margin: 10px;
-	height: 300px;
-	cursor: pointer;
+  float: left;
+  /*All the cards move to the left on each other*/
+  width: 200px;
+  margin: 10px;
+  height: 300px;
+  cursor: pointer;
   background-image: url('../img/card_back.jpg');
-	transition: all 0.6s ease;
-	transform-style: preserve-3d;
+  /*All cards will have this background image*/
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
 }
 
 .card:active {
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  /*Rotates each card horizontally when click*/
 }
 
-div .stats-container{
-	position: absolute;
-	right: 100px;
-	border: 12px solid #B22222;
-	border-radius: 10px
+div .stats-container {
+  position: absolute;
+  right: 100px;
+  border: 12px solid #B22222;
+  border-radius: 10px
 }
 
-#score{
-	font-size: 30px;
+#score {
+  font-size: 30px;
 }
 
-#timer{
-	font-size: 30px;
+#timer {
+  font-size: 30px;
 }
