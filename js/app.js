@@ -43,7 +43,6 @@ $(document).ready(function() { //When the page loads
 
 
     cards[i].addEventListener('click', function(e) { //On the event of a click on a card
-      // console.log(e.target);
       if (this.id == "card1") { //Goes to the first card element from the list
         this.style.backgroundImage = "url('../img/Arsenal-icon.png')"; //Styles the first element with the arsenal logo
       } else if (this.id == "card2") {
@@ -152,7 +151,6 @@ $(document).ready(function() { //When the page loads
     if (count === 0) {
       clearInterval(counter); //Clear interval stops the countdown of the set interval
       //counter ended, do something here
-      console.log("Game over");
       $('.container').empty();
       $('.lose').animate({
         left: '250px'

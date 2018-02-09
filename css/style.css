@@ -9,7 +9,13 @@
   perspective: 700;
   /* background: black; */
 }
+#timer{
+	color: red;
+}
 
+#score{
+	color: red;
+}
 body {
   background: url('../img/card_table.png');
   /*Background of a card table*/
