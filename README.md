@@ -78,17 +78,11 @@ Beginning my idea I drafted my image on paper to get an understanding of what my
 
 Approaching sprint 1 I came across issues trying making the cards be positioned randomly. In order for the game to have random positioning I needed to have placed an algorithm that switch cards around every time the page loads. At the time I had no experience with algorithms however it was the only way to get the feature to work so I used the Fisher-yates shuffle algorithm.
 
-```function shuffle(array) { var currentIndex = array.length, temporaryValue, randomIndex; //Gets the current array
+![alt text](img/code1.png "code1")
 
-`// While there remain elements to shuffle... while (0 !== currentIndex) { //While the array is not equalled to zero it goes through the array`
+![alt text](img/code2.png "code2")
 
-`// Pick a remaining element... randomIndex = Math.floor(Math.random() * currentIndex); currentIndex -= 1; //Generates a random number each time the loop passes and saves in the current index`
-
-`// And swap it with the current element. temporaryValue = array[currentIndex]; //Gets the current index position stores in temporary value array[currentIndex] = array[randomIndex]; //The position of the random number is grabbed by the array of the current position array[randomIndex] = temporaryValue; //This switches the current index position with the array position }`
-
-`return array; //restores the card position back to the array }`
-
-### User Stories
+### User Stories ###
 
 On the website Trello I create stories to understand and work towards completing an mvp (minimal viable product) helping me think of what actions to take when list the features. When using Trello I would drag the message boxes if they were in progress or if they were completed.
 
