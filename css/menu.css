@@ -1,0 +1,49 @@
+body {
+  background: url('../img/card_table.png');
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: fixed;
+  /*Remains in fixed position*/
+  top: 50%;
+  left: 20%;
+  width: 30em;
+  height: 18em;
+  margin-top: -9em;
+  /*set to a negative number 1/2 of your height*/
+  margin-left: -15em;
+  /*set to a negative number 1/2 of your width*/
+}
+
+.Solo-but {
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.Instruct-but {
+  font-size: 20px;
+}
+
+.home_card {
+  position: absolute;
+  left: 110px;
+}
+
+.home_card {
+  perspective: 1000;
+  /*Determines the intesity of the of the 3-d effect*/
+}
+
+.home_card {
+  transform-style: preserve-3d;
+  /*Elements are rendered into a 3d space*/
+  transition: all 1.0s linear;
+  /*Makes the transition effect have the same speed from start to end*/
+}
+
+.home_card:hover {
+  transform: rotateY(180deg);
+  /*Rotates the element vertically*/
+  box-shadow: -5px 5px 5px #aaa;
+}
